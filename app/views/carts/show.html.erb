@@ -15,9 +15,16 @@
         </tr>
       </thead>
       <tbody>
+      <%if enhanced_cart.length == 0 %>
+       <label> Your cart is empty, please go  </label>
+       <a class="btn" href="/products">here</a>
+      <% else %>
+      
         <% enhanced_cart.each do |item| %>
           <%= render 'item', product: item[:product], quantity: item[:quantity].to_i %>
         <% end %>
+        
+      <% end %>
       </tbody>
       <tfoot>
         <tr>
@@ -25,7 +32,7 @@
             TOTAL:
           </th>
           <th>
-            <%= cart_subtotal_cents / 100.0 %>
+            <%= humanized_money_with_symbol cart_subtotal_cents / 100.0 %>
           </th>
         </tr>
       </tfoot>
