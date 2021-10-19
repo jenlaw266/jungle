@@ -4,7 +4,10 @@
 
 <p>The store currently sells <%= @products_count %> products which are organized into 
 <%= @categories_count %> categories</p>
-<p><strong>Product:</strong> <%= @products_count %> </p>
-<p><strong>Categories: </strong><%= @categories_count %> </p>
-<%= link_to 'Admin Product Page', admin_products_path %>
+
+<p><strong>Product:</strong> <%= @products_count %>
+<br/><%= link_to 'Admin Product Page', admin_products_path %> </p>
+
+<p><strong>Categories: </strong><%= @categories_count %> 
+<br/><%= link_to 'Admin Categories Page', admin_categories_path %></p>
  
