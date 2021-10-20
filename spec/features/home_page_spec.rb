@@ -21,7 +21,7 @@ scenario "They see all products" do
   visit root_path
 
   # DEBUG
-  save_screenshot
+  # save_screenshot
 
   # VERIFY
   expect(page).to have_css 'article.product', count: 10
