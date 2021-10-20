@@ -5,9 +5,6 @@ class UsersController < ApplicationController
   end
 
   def create
-    user_params.email.downcase!
-    puts "--------------------"
-    puts user_params.inspect
     @user = User.new(user_params)
     
     if @user.save!

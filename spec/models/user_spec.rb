@@ -39,7 +39,7 @@ RSpec.describe User, type: :model do
     end
   end
   describe '.authenticate_with_credentials' do
-    before { User.create!(first_name: "John", last_name: "Doe", email: "John@email.com", password: "secret", password_confirmation: "secret") }
+    before { User.create!(first_name: "John", last_name: "Doe", email: "john@email.com", password: "secret", password_confirmation: "secret") }
     context "login" do
       it "should be user" do
         user = User.authenticate_with_credentials('john@email.com', "secret")
