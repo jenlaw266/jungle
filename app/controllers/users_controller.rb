@@ -6,7 +6,6 @@ class UsersController < ApplicationController
 
   def create
     @user = User.new(user_params)
-    puts "--------------------------------enter create"
     
     if @user.save!
       session[:user_id] = @user.id
