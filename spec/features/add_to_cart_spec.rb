@@ -1,7 +1,6 @@
 require 'rails_helper'
 
-RSpec.feature "Users navigate from home page to product detail page", type: :feature, js: true do
-  
+RSpec.feature "User click add to cart", type: :feature, js: true do
   before :each do
     @category = Category.create! name: 'Apparel'
 
@@ -12,21 +11,20 @@ RSpec.feature "Users navigate from home page to product detail page", type: :fea
       quantity: 10,
       price: 64.99
     )
-
-    @product = @category.products.sample
     
   end
 
   scenario "Click on product" do
     # ACT
     visit root_path
-    find("#product-#{@product.id} h4").click 
+    click_button 'Add'
 
     # DEBUG
-    save_screenshot
-
+    # save_screenshot
+    # puts page.html
+    
     # VERIFY
-    expect(page).to have_current_path(product_path(@product.id))
+    expect(page).to have_content('My Cart (1)')
   end
 
 end
