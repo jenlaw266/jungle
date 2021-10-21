@@ -2,6 +2,12 @@
 
 A mini e-commerce application built with Rails 4.2 for purposes of experimenting with Rails.
 
+![""](https://github.com/jenlaw266/jungle/blob/master/docs/screenshots/index.png?raw=true)
+![""](https://github.com/jenlaw266/jungle/blob/master/docs/screenshots/sold-out.png?raw=true)
+![""](https://github.com/jenlaw266/jungle/blob/master/docs/screenshots/cart.png?raw=true)
+![""](https://github.com/jenlaw266/jungle/blob/master/docs/screenshots/payment.png?raw=true)
+![""](https://github.com/jenlaw266/jungle/blob/master/docs/screenshots/admin-product.png?raw=true)
+
 ## Additional Steps for Apple M1 Machines
 
 1. Make sure that you are runnning Ruby 2.6.6 (`ruby -v`)
